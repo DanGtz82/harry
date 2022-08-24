@@ -1,0 +1,15 @@
+.avatar{
+    background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 132px;
+  max-width: 132px;
+  border-radius: 100px;
+}
+
+@media screen and (max-width:640px){
+    .avatar{
+        min-height: 100px;
+        max-width: 100px;
+    }
+}
+
