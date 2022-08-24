@@ -1,4 +1,7 @@
-import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import clsx from 'clsx';
+import { toggleFavorite } from '../../store/characters';
 
 interface Props {
   name: string;
@@ -9,6 +12,14 @@ interface Props {
 }
 
 const Main = ({ name, alive, student, staff }: Props) => {
+  const dispatch = useDispatch();
+  const [isFav, setIsFav] = useState(false);
+  const toggleFav = () => {
+    const isFavValue = !isFav;
+    setIsFav(isFavValue);
+    dispatch(toggleFavorite({ personaje: name, isFav: isFavValue }));
+  };
+
   const showLevel = () => {
     if (student) {
       return <span className="text-uppercase p-1 text-start">Estudiante</span>;
@@ -33,7 +44,15 @@ const Main = ({ name, alive, student, staff }: Props) => {
           <span className="d-none d-md-block">/</span>
           {showLevel()}
         </div>
-        <i className="fa-regular fa-bookmark d-none d-md-block" />
+        <i
+          className={clsx(
+            `fa-${isFav ? 'solid' : 'regular'}`,
+            'fa-bookmark',
+            'd-none',
+            'd-md-block'
+          )}
+          onClick={() => toggleFav()}
+        />
       </div>
     </div>
   );
