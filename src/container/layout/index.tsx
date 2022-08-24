@@ -1,6 +1,6 @@
 import Card from '../../components/card';
 import { Character } from '../../models/characters';
-
+import './index.css';
 interface Props {
   personajes: Character[];
 }

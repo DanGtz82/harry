@@ -10,10 +10,25 @@ interface Props {
 }
 
 const Card = ({ personaje }: Props) => {
+    const isMobile = window.innerWidth <= 640;
   return (
     <div className="card">
       <div className="row g-0">
-        <div className={clsx('col-md-6', personaje.house.toLowerCase())}>
+      <div
+          className={clsx(
+            'col-md-6',
+            personaje.house.toLowerCase(),
+            'd-flex',
+            'flex-column',
+            'align-items-center',
+            'justify-content-center',
+            {
+              'rounded-start': !isMobile,
+              'rounded-top': isMobile
+            }
+          )}
+        >
+
           <Avatar image={personaje.image} />
         </div>
         <div className="col-md-6">

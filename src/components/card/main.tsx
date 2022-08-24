@@ -22,7 +22,7 @@ const Main = ({ name, alive, student, staff }: Props) => {
   };
   return (
     <div className="d-flex flex-column flex-md-column-reverse align-items-start">
-      <div className="fs-3 fw-bold ">
+      <div className="fw-bold ">
         {name}
       </div>
       <div className="d-flex flex-row align-items-center w-100">

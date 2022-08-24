@@ -6,10 +6,9 @@
   border-radius: 100px;
 }
 
-@media screen and (max-width:640px){
-    .avatar{
-        min-height: 100px;
-        max-width: 100px;
-    }
+.avatar-img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
 }
 
