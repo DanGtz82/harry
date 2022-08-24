@@ -7,7 +7,7 @@ interface Props {
 
 const Button = ({ text }: Props) => {
   return (
-    <button type="button" className={clsx('btn', 'btn-control', 'mx-3')}>
+    <button type="button" className={clsx('btn', 'btn-control', 'mx-3','col-6')}>
       {text}
     </button>
   );

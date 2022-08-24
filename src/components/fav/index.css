@@ -1,9 +1,13 @@
-.img-avatar-fav{
+.img-avatar-fav {
     object-fit: cover;
-    width:22px;
-    height:22px;
+    width: 22px;
+    height: 22px;
 }
 
-.dropdown-item > *{
+.dropdown-item>* {
     margin: 1px 3px;
+}
+
+.dropdown-item {
+    cursor: pointer;
 }

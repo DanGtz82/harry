@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import clsx from 'clsx';
 import { toggleFavorite } from '../../store/characters';
+import { RootState } from '../../store';
 
 interface Props {
   name: string;
@@ -13,6 +14,9 @@ interface Props {
 
 const Main = ({ name, alive, student, staff }: Props) => {
   const dispatch = useDispatch();
+  const { favoritos } = useSelector(
+    (state: RootState) => state.charactersReducer
+  );
   const [isFav, setIsFav] = useState(false);
   const toggleFav = () => {
     const isFavValue = !isFav;
@@ -46,7 +50,7 @@ const Main = ({ name, alive, student, staff }: Props) => {
         </div>
         <i
           className={clsx(
-            `fa-${isFav ? 'solid' : 'regular'}`,
+            `fa-${favoritos.includes(name) ? 'solid' : 'regular'}`,
             'fa-bookmark',
             'd-none',
             'd-md-block'

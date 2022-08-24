@@ -40,6 +40,7 @@ const Card = ({ personaje }: Props) => {
               staff={personaje.hogwartsStaff}
             />
             <Details
+              name={personaje.name}
               dateOfBirth={personaje.dateOfBirth}
               gender={personaje.gender}
               eyeColour={personaje.eyeColour}

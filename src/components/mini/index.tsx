@@ -26,7 +26,7 @@ const Mini = () => {
         'fixed-bottom'
       )}
     >
-      <div className="btn-group-sm" role={'group'}>
+      <div className="btn-group-sm nav" role={'group'}>
         <button
           className={clsx('btn btn-small', 'btn-mini', 'dropdown-toggle')}
           data-bs-toggle="dropdown"

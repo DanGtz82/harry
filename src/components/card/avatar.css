@@ -8,6 +8,7 @@
 
 .avatar-img{
     object-fit: cover;
+    object-position: 1px 10%;
     width: 100px;
     height: 100px;
 }

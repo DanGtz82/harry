@@ -3,7 +3,7 @@ import { RootState } from '../store';
 import Mini from '../components/mini';
 import Controls from './controls';
 import Layout from './layout';
-import Form from './form/index'
+import Form from '../components/form'
 
 const Main = () => {
   const personajes = useSelector(

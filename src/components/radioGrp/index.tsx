@@ -14,7 +14,7 @@ const RadioGroup = ({ name, lbl, options }: Props) => {
         {lbl}
       </div>
     <div className="d-flex flex-row justify-content-start align-items-center">
-      {options.map(option => <Option {...{ ...option, name, lbl }} />)}
+      {options.map(option => <Option key={`${option.id}`} {...{ ...option, name, lbl }} />)}
     </div>
     </>
   );

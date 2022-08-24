@@ -1,4 +1,5 @@
 interface Props {
+    name: string;
     dateOfBirth: string;
     gender: string;
     eyeColour: string;
@@ -8,18 +9,25 @@ interface Props {
   interface rowProps {
     label: string;
     value: string;
+    id: number;
   }
   
-  const Detail = ({ dateOfBirth, gender, eyeColour, hairColour }: Props) => {
+  const Detail = ({
+    name,
+    dateOfBirth,
+    gender,
+    eyeColour,
+    hairColour
+  }: Props) => {
     const rows: rowProps[] = [
-      { label: 'cumpleaños', value: dateOfBirth },
-      { label: 'género', value: gender },
-      { label: 'color de ojos', value: eyeColour },
-      { label: 'color de pelo', value: hairColour }
+      { label: 'cumpleaños', value: dateOfBirth, id: 1 },
+      { label: 'género', value: gender, id: 2 },
+      { label: 'color de ojos', value: eyeColour, id: 3 },
+      { label: 'color de pelo', value: hairColour, id: 4 }
     ];
   
-    const row = ({ label, value }: rowProps) =>
-      <div className="d-flex flex-row text-capitalize">
+    const row = ({ label, value }: rowProps, key: string) =>
+      <div className="d-flex flex-row text-capitalize" key={key}>
         <span className="fw-bold">{label}: </span>
         &nbsp;
         {value}
@@ -27,7 +35,7 @@ interface Props {
   
     return (
       <div className="d-none d-sm-block d-flex flex-column align-items-start">
-        {rows.map(r => row(r))}
+        {rows.map(r => row(r, `${r.id}-${name}-${r.value}-${new Date()}`))}
       </div>
     );
   };

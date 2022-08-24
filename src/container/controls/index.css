@@ -1,0 +1,22 @@
+
+.filter{
+    color:white;
+}
+
+.tittle-filter{
+    font-size: 80px;
+    margin: 30px 0px;
+  }
+  
+  .text-filter{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 25px;
+    padding: 20px 0px;
+  }
+
+.buttons-filter{
+    width: 90%;
+    display: inline-flex
+}
