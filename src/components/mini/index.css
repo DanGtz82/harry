@@ -1,0 +1,12 @@
+.btn-mini{
+    background-color: #6B63B5 !important;
+    color:whitesmoke !important;
+}
+
+.btn-mini::after{
+    display: none;
+}
+
+.dropdown-menu{
+    background-color: #6B63B5 !important;
+}

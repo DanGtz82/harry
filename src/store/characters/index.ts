@@ -14,6 +14,6 @@ export const characterSlice = createSlice({
   reducers
 });
 
-export const { toggleFavorite } = characterSlice.actions;
+export const { toggleFavorite, addOne } = characterSlice.actions;
 
 export default characterSlice.reducer;

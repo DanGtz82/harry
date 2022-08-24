@@ -1,7 +1,9 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
+import Mini from '../components/mini';
 import Controls from './controls';
 import Layout from './layout';
+import Form from './form/index'
 
 const Main = () => {
   const personajes = useSelector(
@@ -10,8 +12,10 @@ const Main = () => {
 
   return (
     <div className="container">
+      <Mini />
       <Controls />
       <Layout personajes={personajes} />
+      <Form />
     </div>
   );
 };

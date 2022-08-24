@@ -1,7 +1,7 @@
 export interface Wand {
     wood: string;
     core: string;
-    lenght?: number;
+    length?: number | string;
   }
   
   export interface Character {
@@ -21,5 +21,5 @@ export interface Wand {
     actor: string;
     alive: boolean;
     image: string;
-  }
+  }  
   

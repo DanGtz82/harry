@@ -1,0 +1,9 @@
+.img-avatar-fav{
+    object-fit: cover;
+    width:22px;
+    height:22px;
+}
+
+.dropdown-item > *{
+    margin: 1px 3px;
+}

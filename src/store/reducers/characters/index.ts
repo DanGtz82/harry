@@ -7,6 +7,9 @@ export const reducers = {
   addCharacters: (state:InitialStoreSlice,action:PayloadAction<Character[]>) => {
     state.personajes = action.payload
   },
+  addOne:(state:InitialStoreSlice,action:PayloadAction<Character>)=>{
+    state.personajes.push(action.payload);
+  },
   toggleFavorite:(state:InitialStoreSlice,action:PayloadAction<ActionFav>) =>{
     if(action.payload.isFav){
      

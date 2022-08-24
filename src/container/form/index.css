@@ -1,0 +1,10 @@
+.form-body{
+    width:100%;
+}
+
+.btn-save{
+    color:whitesmoke !important;
+    background-color: #000 !important;
+    opacity: 60%;
+    border:#6B63B5 3px solid;
+}
